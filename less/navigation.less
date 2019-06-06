@@ -1,1 +1,46 @@
 // Navigation Styles here
+nav {
+    .displayFlex(flex-start, center);
+    .paddingTandB(20px, 20px);
+    border-bottom: 2px dashed @silver;
+    width: 100%;
+
+    @media @mobile {
+        flex-flow: row wrap;
+        .displayFlex(center, center);
+        .paddingTandB(20px, 5px);
+        max-width: 500px;
+        width: 100%;
+
+        h1{
+            font-size: 3rem;
+            margin-left: 35%;
+            margin-right: 35%;
+            padding-bottom: 15px;
+            padding-left: 15px;
+        }
+        a{
+            margin-left: 20px;
+            width: 20%;
+            flex-flow: row nowrap;
+        }
+    }
+
+    #FirstNav {
+        margin-left: 40%;
+        @media @mobile {
+            margin-left: 20px;
+        }
+    }
+    a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.6rem;
+        color: black;
+        text-decoration: none;
+        padding-left: 25px;
+        
+        @media @mobile{
+            padding-left: 10px;
+        }
+    }
+}

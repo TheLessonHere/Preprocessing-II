@@ -1,4 +1,25 @@
 .home {
+@media @mobile{
+  max-width: 500px;
+}
+  header {
+    img{
+      margin-bottom: 20px;
+
+      @media @mobile {
+        width: 98%;
+        padding-left: 2.5%;
+        margin-bottom: 15px;
+      }
+    }
+    .top-text {
+      .paddingTandB(5px, 10px);
+
+      @media @mobile {
+        .paddingLandR(5%, 2.5%);
+      }
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,11 +27,18 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile {
+      .paddingLandR(5%, 0px);
+      flex-flow: column nowrap;
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
@@ -20,30 +48,61 @@
       img {
         border-radius: 10px;
       }
+
+      @media @mobile {
+        width: 98%;
+        padding-left: 0px;
+
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 
-  .inverse-content {
-    padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+    .inverse-content {
+      padding-bottom: 30px;
+      border-bottom: 2px dashed @navigation-border;
 
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
-    }
+      @media @mobile {
+        flex-flow: column-reverse nowrap;
+        .paddingLandR(5%, 2%);
+        width: 100%;
+      }
 
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
+      .text-content {
+        padding-left: 1%;
+        padding-right: 0;
+
+        @media @mobile {
+          padding-left: 0.8%;
+        }
+      }
+
+      .img-content {
+        padding-right: 1%;
+        padding-left: 0;
+
+        @media @mobile {
+          width: 100%;
+          padding-right: 0px;
+      }
     }
   }
-
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 90%;
+    }
+
     img {
       border-radius: 10px;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
   }
 
@@ -53,9 +112,28 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      padding-top: 35px;
+      .displayFlex (center, center);
+      flex-flow: column nowrap;
+      .paddingLandR(15%, 5%);
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 100%;
+      }
+
+      button {
+        .buttonStyle(@button-bg, white, 12px 50px, 15px, 1.8rem);
+
+        @media @mobile {
+          .buttonStyle(@button-bg, white, 12px 130px, 15px, 1.8rem);
+        }
+      }
     }
   }
-}// home
+}
